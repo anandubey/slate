@@ -1,0 +1,16 @@
+[package]
+name = "slate"
+version = "0.2.0"
+edition = "2024"
+
+[dependencies]
+ratatui = "0.30"
+rusqlite = { version = "0.39", features = ["bundled", "chrono"] }
+rusqlite_migration = "2.5"
+chrono = "0.4"
+color-eyre = "0.6"
+dirs = "6"
+
+[profile.release]
+lto = true
+strip = true
