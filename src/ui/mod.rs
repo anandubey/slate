@@ -36,17 +36,16 @@ pub fn draw(frame: &mut Frame, app: &App) {
 }
 
 fn render_header(frame: &mut Frame, area: Rect) {
-    // Unicode full-width bold letters for a bigger feel on a single line
     let title = Line::from(vec![
-        Span::styled("Ｓ", Style::default().fg(theme::GRAD_1).add_modifier(Modifier::BOLD)),
-        Span::styled("Ｌ", Style::default().fg(theme::GRAD_2).add_modifier(Modifier::BOLD)),
-        Span::styled("Ａ", Style::default().fg(theme::GRAD_3).add_modifier(Modifier::BOLD)),
-        Span::styled("Ｔ", Style::default().fg(theme::GRAD_4).add_modifier(Modifier::BOLD)),
-        Span::styled("Ｅ", Style::default().fg(theme::GRAD_5).add_modifier(Modifier::BOLD)),
-        Span::styled("  ", Style::default()),
         Span::styled(
-            "Personal Task Planner",
-            Style::default().fg(theme::FG_DIM),
+            "slate",
+            Style::default()
+                .fg(theme::TITLE)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(
+            " — personal task planner",
+            Style::default().fg(theme::TITLE_DIM),
         ),
     ]);
 
@@ -68,7 +67,7 @@ fn render_status_bar(frame: &mut Frame, app: &App, area: Rect) {
             Span::styled(" scroll  ", Style::default().fg(theme::FG_DIM)),
             Span::styled("n", Style::default().fg(theme::FG_ACCENT)),
             Span::styled(" new  ", Style::default().fg(theme::FG_DIM)),
-            Span::styled("m", Style::default().fg(theme::FG_ACCENT)),
+            Span::styled("H/L", Style::default().fg(theme::FG_ACCENT)),
             Span::styled(" move  ", Style::default().fg(theme::FG_DIM)),
             Span::styled("d", Style::default().fg(theme::FG_ACCENT)),
             Span::styled(" delete  ", Style::default().fg(theme::FG_DIM)),

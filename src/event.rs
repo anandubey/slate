@@ -65,14 +65,16 @@ fn handle_normal(app: &mut App, key: KeyEvent) -> Result<()> {
             }
         }
 
-        // Move forward (Todo -> InProgress -> Done)
-        KeyCode::Char('m') => {
+        // Move card right (Todo -> InProgress -> Done)
+        KeyCode::Char('L') => {
             app.move_selected_forward()?;
+            adjust_scroll(app);
         }
 
-        // Move backward (Done -> InProgress -> Todo)
-        KeyCode::Char('M') => {
+        // Move card left (Done -> InProgress -> Todo)
+        KeyCode::Char('H') => {
             app.move_selected_backward()?;
+            adjust_scroll(app);
         }
 
         _ => {}

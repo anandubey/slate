@@ -1,38 +1,33 @@
 use ratatui::style::Color;
 
-// Dark theme inspired by Linear
-pub const BG_BASE: Color = Color::Rgb(18, 18, 20);
-pub const BG_COLUMN: Color = Color::Rgb(25, 25, 28);
-pub const BG_CARD: Color = Color::Rgb(32, 32, 36);
-pub const BG_CARD_SELECTED: Color = Color::Rgb(45, 42, 58);
-pub const BG_INPUT: Color = Color::Rgb(38, 38, 44);
+// Catppuccin Mocha
+pub const BG_BASE: Color = Color::Rgb(30, 30, 46);        // Base
+pub const BG_COLUMN: Color = Color::Rgb(24, 24, 37);      // Mantle
+pub const BG_CARD: Color = Color::Rgb(49, 50, 68);        // Surface 0
+pub const BG_CARD_SELECTED: Color = Color::Rgb(69, 71, 90); // Surface 1
+pub const BG_INPUT: Color = Color::Rgb(24, 24, 37);       // Mantle
 
-pub const FG_PRIMARY: Color = Color::Rgb(225, 225, 230);
-pub const FG_SECONDARY: Color = Color::Rgb(160, 160, 170);
-pub const FG_DIM: Color = Color::Rgb(90, 90, 100);
-pub const FG_ACCENT: Color = Color::Rgb(129, 140, 248);
-pub const FG_BORDER: Color = Color::Rgb(50, 50, 58);
-pub const FG_BORDER_ACTIVE: Color = Color::Rgb(99, 102, 241);
+pub const FG_PRIMARY: Color = Color::Rgb(205, 214, 244);  // Text
+pub const FG_SECONDARY: Color = Color::Rgb(166, 173, 200); // Subtext 0
+pub const FG_DIM: Color = Color::Rgb(108, 112, 134);      // Overlay 0
+pub const FG_ACCENT: Color = Color::Rgb(203, 166, 247);   // Mauve
+pub const FG_BORDER: Color = Color::Rgb(69, 71, 90);      // Surface 1
+pub const FG_BORDER_ACTIVE: Color = Color::Rgb(180, 190, 254); // Lavender
 
-pub const STATUS_TODO: Color = Color::Rgb(148, 163, 184);
-pub const STATUS_IN_PROGRESS: Color = Color::Rgb(251, 191, 36);
-pub const STATUS_DONE: Color = Color::Rgb(52, 211, 153);
+pub const STATUS_TODO: Color = Color::Rgb(137, 180, 250);  // Blue
+pub const STATUS_IN_PROGRESS: Color = Color::Rgb(249, 226, 175); // Yellow
+pub const STATUS_DONE: Color = Color::Rgb(166, 227, 161);  // Green
 
-pub const PRIORITY_HIGH: Color = Color::Rgb(248, 113, 113);
-pub const PRIORITY_MEDIUM: Color = Color::Rgb(251, 191, 36);
-pub const PRIORITY_LOW: Color = Color::Rgb(96, 165, 250);
-pub const PRIORITY_NONE: Color = Color::Rgb(90, 90, 100);
+pub const PRIORITY_HIGH: Color = Color::Rgb(243, 139, 168); // Red
+pub const PRIORITY_MEDIUM: Color = Color::Rgb(250, 179, 135); // Peach
+pub const PRIORITY_LOW: Color = Color::Rgb(116, 199, 236); // Sapphire
+pub const PRIORITY_NONE: Color = Color::Rgb(108, 112, 134); // Overlay 0
 
-pub const FG_CONFIRM: Color = Color::Rgb(248, 113, 113);
+pub const FG_CONFIRM: Color = Color::Rgb(243, 139, 168);   // Red
 
-// Gradient colors for the SLATE logo (purple -> blue -> cyan)
-pub const GRAD_1: Color = Color::Rgb(168, 85, 247);
-pub const GRAD_2: Color = Color::Rgb(139, 92, 246);
-pub const GRAD_3: Color = Color::Rgb(99, 102, 241);
-pub const GRAD_4: Color = Color::Rgb(59, 130, 246);
-pub const GRAD_5: Color = Color::Rgb(34, 211, 238);
+pub const CARD_ACCENT_TODO: Color = Color::Rgb(137, 180, 250);    // Blue
+pub const CARD_ACCENT_IN_PROGRESS: Color = Color::Rgb(249, 226, 175); // Yellow
+pub const CARD_ACCENT_DONE: Color = Color::Rgb(166, 227, 161);    // Green
 
-// Card left-border accent per status
-pub const CARD_ACCENT_TODO: Color = Color::Rgb(100, 116, 139);
-pub const CARD_ACCENT_IN_PROGRESS: Color = Color::Rgb(245, 158, 11);
-pub const CARD_ACCENT_DONE: Color = Color::Rgb(34, 197, 94);
+pub const TITLE: Color = Color::Rgb(203, 166, 247);        // Mauve
+pub const TITLE_DIM: Color = Color::Rgb(147, 153, 178);    // Subtext 1

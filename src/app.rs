@@ -173,6 +173,9 @@ impl App {
                 let target_idx = self.column_for_status(next_status);
                 self.refresh_column(self.active_column)?;
                 self.refresh_column(target_idx)?;
+                // Focus follows the card
+                self.active_column = target_idx;
+                self.select_issue_by_id(target_idx, id);
             }
         }
         Ok(())
@@ -187,8 +190,18 @@ impl App {
                 let target_idx = self.column_for_status(prev_status);
                 self.refresh_column(self.active_column)?;
                 self.refresh_column(target_idx)?;
+                // Focus follows the card
+                self.active_column = target_idx;
+                self.select_issue_by_id(target_idx, id);
             }
         }
         Ok(())
+    }
+
+    fn select_issue_by_id(&mut self, col_idx: usize, issue_id: i64) {
+        let col = &mut self.columns[col_idx];
+        if let Some(pos) = col.issues.iter().position(|i| i.id == issue_id) {
+            col.selected = pos;
+        }
     }
 }
